@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p::first-letter{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--伪元素：伪类使用一个冒号，而伪元素使用两个冒号，css2定义了四个伪元素，分别用于装饰元素的首字母、首行，以及创建和装饰“前置”和“后置”
+        内容。伪元素和伪类很像，它在文档中插入虚构的元素。
+        注意：所有伪元素必须出现在选择器的最后。例如P::first-line span是无效的-->
+
+    <!-- 1. ::first-letter伪元素用于装饰任何非行内元素的首字母，或者开头的标点符号和首字母(如果文本以标点符号开头) -->
+    <!-- 例如下面的例子，将把每一段的首字母设为红色 -->
+    <p>hello</p>
+    <p>world</p>
+</body>
+</html>
