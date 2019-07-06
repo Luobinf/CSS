@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css伪类</title>
+    <style>
+      p:first-child{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- 伪类都是一个冒号(:)后面跟着一个词，而且可以出现在选择器的任何位置。伪类依附于所在的元素，可以为元素的不同状态呈现不同的
+         样式，例如当你将鼠标移入a标签时，可以使用:hover伪类，然后写一些样式。但是这个样式还是触发在冒号前的那个元素。例如p段落标签给一
+        个伪类，p:first-child，这表示它选择的是一个元素中的第一个p子元素;而不是你可能会认为的,选中p元素下面的第一个子元素。可以看下面例子 
+    -->
+
+   <div class="box">
+        <p>hello</p>
+        <p>hello<span>你好</span></p>
+    </div>
+  <!-- 以上可以看到只有第一行的文字变成棕色了，而第二个p元素下面的span元素里面的文字并没有变成棕色 -->
+</body>
+</html>
