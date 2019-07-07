@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>伪元素</title>
     <style>
         p::first-letter{
             color: red;
+        }
+        P.line::first-line{
+            color: red;
+        }
+        h1::before{
+            content: '[]';
+            color: red;
+        }
+        h2::after{
+            content: '[]';
+            color: skyblue;
         }
     </style>
 </head>
@@ -20,5 +31,20 @@
     <!-- 例如下面的例子，将把每一段的首字母设为红色 -->
     <p>hello</p>
     <p>world</p>
+    
+    <!-- 2. ::first-line用于装饰元素的首行文本 -->
+    <!-- 可以看到下面id为line的p元素中换行符前面的那一行文本变成了红色-->
+    <p class="line">
+        关于华为鸿蒙系统，另据国外媒体Huawei Central报道，有知情人士透露，华为的自<br>
+        研操作系统鸿蒙OS已经在小规模的测试之中，知情人士表示，这款华为新机很有可能
+    </p>
+    <!-- 对::first-letter和::first-line的限制  目前这两个伪元素只能应用到块级元素上，例如标题或者段落，不能应用到
+            行内元素上，例如span元素等。-->
+
+    <!-- 3.装饰元素的前置或者后置内容可以使用伪元素::before ::after -->
+    <!-- 例如想要在h1元素前面增加一个括号 h1::before{content: '[]';color: red;}-->
+    <h1>china</h1>
+    <!-- 想要把内容放入元素的后面可以使用::after伪元素 h2::after{content:'[]';color: skyblue;-->
+    <h2>css tricks</h2>
 </body>
 </html>
