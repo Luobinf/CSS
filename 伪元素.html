@@ -31,7 +31,12 @@
     <!-- 例如下面的例子，将把每一段的首字母设为红色 -->
     <p>hello</p>
     <p>world</p>
-    
+    <!-- 这个规则实际上相当于让浏览器装饰每一个p元素中包围首字母的一个虚构元素。例如： -->
+    <p><p-first-letter>h</p-first-letter>llo</p>
+    <p><p-first-letter>w</p-first-letter>orld</p>
+    <!--::first-letter样式只应用到上面那个虚构的元素里面的内容。<p-first-letter>元素不会出现在源码中，也不会出现在DOM树中
+        而是让浏览器动态构建，目的是把::first-letter的样式应用到相应的文本上。也即，<p-first-letter>是一个伪元素。 -->
+
     <!-- 2. ::first-line用于装饰元素的首行文本 -->
     <!-- 可以看到下面id为line的p元素中换行符前面的那一行文本变成了红色-->
     <p class="line">
