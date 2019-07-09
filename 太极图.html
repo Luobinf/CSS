@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阴阳图</title>
+    <style>
+        body {
+            background-color: #dfdfdf
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .yinyang {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, white 0%, white 50%, #0a020f 50%, #140b13 100%);
+            margin: 0 auto;
+            position: relative;
+            animation-duration: 1s;
+            animation-name: spin;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        /* 使用border作为背景，那么里面的小圆圈只要设置背景颜色就可以了 */
+        .yinyang::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            /* border: 1px solid red; */
+            border-radius: 50%;
+            position: absolute;
+            background-color: white;
+            top: 50px;
+            border: 40px solid #140b13;
+        }
+
+        .yinyang::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #140b13;
+            border: 40px solid white;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yinyang">
+        <!-- <div class="one">
+            <div class="circle"></div>
+        </div>
+        <div class="two">
+            <div class="circle"></div>
+        </div> -->
+    </div>
+</body>
+
+</html>
